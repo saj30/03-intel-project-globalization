@@ -1,138 +1,238 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="rtl"> <!-- Set the direction to RTL -->
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Intel: Sustainability Through the Ages</title>
   <link rel="stylesheet" href="style.css" />
+  <!-- Favicon for browser tabs -->
+  <link rel="icon" type="image/png" href="eco-friendly-intel-logo.png" />
+  <!-- Add Bootstrap CSS for the grid system -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
+  <!-- Language selector in the top left with a label -->
+  <div style="position: absolute; top: 10px; left: 10px; z-index: 1000;">
+    <!-- Label for the language selector -->
+    <label for="lang-select" style="margin-left: 8px;">اختر اللغة:</label>
+    <select id="lang-select" class="form-select w-auto d-inline-block" style="display: inline-block;">
+      <option value="ar">العربية</option>
+      <option value="en">English</option>
+    </select>
+  </div>
 
   <!-- Header / Hero Section -->
   <header>
-    <div class="header-content">
+    <div class="header-content text-end"><!-- Align header content to the right -->
       <!-- Intel logo (replace with your own image if needed) -->
       <img src="eco-friendly-intel-logo.png" alt="Intel Logo" class="intel-logo" />
       <!-- Main Heading -->
-      <h1>Sustainability Through the Ages</h1>
+      <h1>استدامة عبر العصور</h1> <!-- Example: Arabic title, or keep English if you prefer -->
       <!-- Subheading -->
       <p class="subheading">
-        Discover Intel's journey to a more sustainable future, from early innovation to today's climate action and green manufacturing.
+        اكتشف رحلة إنتل نحو مستقبل أكثر استدامة، من الابتكار المبكر إلى العمل المناخي اليوم والتصنيع الأخضر.
+        <!-- Or keep your English text if you prefer -->
       </p>
     </div>
   </header>
 
-  <!-- Timeline Cards Section -->
-  <section class="timeline-container">
-    <!-- Each event is a timeline-card -->
-    <div class="timeline-card">
-      <h2>1995</h2>
-      <h3>First Environmental Report</h3>
-      <!-- Timeline image -->
-      <img src="https://placehold.co/250x100/0068b5/fff?text=1995" alt="Green Leaf" />
-      <p>
-        Intel publishes its first environmental, health, and safety report.
-      </p>
-      <!-- More details shown on hover (can be styled with CSS) -->
-      <div class="card-details">
-        <p>
-          This milestone marked the beginning of Intel's public commitment to transparency and environmental responsibility.
-        </p>
+  <!-- Timeline Cards Section using Bootstrap grid -->
+  <div class="container text-end"><!-- Align text to the right -->
+    <!-- This row will show 4 cards per row on large screens, fewer on small screens -->
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
+      <!-- Timeline Card 1 -->
+      <div class="col mb-4">
+        <div class="timeline-card text-end"><!-- Align card content to the right -->
+          <h2>١٩٩٥</h2>
+          <h3>أول تقرير بيئي</h3>
+          <!-- Timeline image -->
+          <img src="https://placehold.co/250x100/0068b5/fff?text=1995" alt="Green Leaf" />
+          <p>
+            نشرت إنتل أول تقرير عن البيئة والصحة والسلامة.
+          </p>
+          <!-- More details shown on hover (can be styled with CSS) -->
+          <div class="card-details">
+            <p>
+              مثل هذا الإنجاز بداية التزام إنتل بالشفافية والمسؤولية البيئية.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Timeline Card 2 -->
+      <div class="col mb-4">
+        <div class="timeline-card text-end">
+          <h2>٢٠٠٨</h2>
+          <h3>جائزة قيادة الطاقة الخضراء</h3>
+          <img src="https://placehold.co/250x100/00b67a/fff?text=2008" alt="Award" />
+          <p>
+            تم تكريم إنتل كأكبر مشترٍ للطاقة الخضراء طواعية في الولايات المتحدة.
+          </p>
+          <div class="card-details">
+            <p>
+              فازت إنتل بجائزة وكالة حماية البيئة للطاقة الخضراء، مما يبرز ريادتها في استخدام الطاقة المتجددة.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Timeline Card 3 -->
+      <div class="col mb-4">
+        <div class="timeline-card text-end">
+          <h2>٢٠١٢</h2>
+          <h3>حفظ المياه</h3>
+          <img src="https://placehold.co/250x100/0071c5/fff?text=2012" alt="Water Conservation" />
+          <p>
+            بدأت إنتل مشاريع كبيرة لحفظ المياه.
+          </p>
+          <div class="card-details">
+            <p>
+              توفر هذه المشاريع مليارات الجالونات من المياه كل عام، دعماً لأهداف استدامة إنتل.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Timeline Card 4 -->
+      <div class="col mb-4">
+        <div class="timeline-card text-end">
+          <h2>٢٠٢٠</h2>
+          <h3>استراتيجية RISE</h3>
+          <img src="https://placehold.co/250x100/00b67a/fff?text=2020" alt="RISE Strategy" />
+          <p>
+            أطلقت إنتل استراتيجية RISE.
+          </p>
+          <div class="card-details">
+            <p>
+              تعني RISE المسؤولية، والشمول، والاستدامة، وتمكين التكنولوجيا من أجل الخير.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Timeline Card 5 -->
+      <div class="col mb-4">
+        <div class="timeline-card text-end">
+          <h2>٢٠٢١</h2>
+          <h3>100% طاقة خضراء في الولايات المتحدة وأوروبا وإسرائيل</h3>
+          <img src="https://placehold.co/250x100/0068b5/fff?text=2021" alt="Solar Panels" />
+          <p>
+            حققت إنتل استخدام 100% من الكهرباء المتجددة في المناطق الرئيسية.
+          </p>
+          <div class="card-details">
+            <p>
+              يشمل هذا الإنجاز عمليات إنتل في الولايات المتحدة وأوروبا وإسرائيل، مما يقلل من بصمتها الكربونية.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Timeline Card 6 -->
+      <div class="col mb-4">
+        <div class="timeline-card text-end">
+          <h2>٢٠٢٢</h2>
+          <h3>التزام بالحياد الكربوني بحلول 2040</h3>
+          <img src="https://placehold.co/250x100/00b67a/fff?text=2022" alt="Net Zero" />
+          <p>
+            التزمت إنتل بالوصول إلى حياد انبعاثات الغازات الدفيئة بحلول عام 2040.
+          </p>
+          <div class="card-details">
+            <p>
+              تهدف إنتل إلى تحقيق صافي انبعاثات صفرية عبر عملياتها العالمية، استنادًا إلى سنوات من التقدم البيئي.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Timeline Card 7 -->
+      <div class="col mb-4">
+        <div class="timeline-card text-end">
+          <h2>٢٠٢٣</h2>
+          <h3>استعادة المياه</h3>
+          <img src="https://placehold.co/250x100/0071c5/fff?text=2023" alt="Water Restoration" />
+          <p>
+            استعادة إنتل 100% من استخدام مياهها العذبة العالمية.
+          </p>
+          <div class="card-details">
+            <p>
+              تم إعادة مليارات الجالونات إلى الأحواض المائية المحلية، دعمًا للمجتمعات والأنظمة البيئية.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Timeline Card 8 -->
+      <div class="col mb-4">
+        <div class="timeline-card text-end">
+          <h2>٢٠٢٤</h2>
+          <h3>قمة الاستدامة</h3>
+          <img src="https://placehold.co/250x100/0068b5/fff?text=2024" alt="Sustainability Summit" />
+          <p>
+            استضافت إنتل أول قمة للاستدامة.
+          </p>
+          <div class="card-details">
+            <p>
+              جمعت القمة قادة الصناعة لتعزيز التصنيع الأخضر للشرائح ومشاركة أفضل الممارسات.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="timeline-card">
-      <h2>2008</h2>
-      <h3>Green Power Leadership Award</h3>
-      <img src="https://placehold.co/250x100/00b67a/fff?text=2008" alt="Award" />
-      <p>
-        Intel is recognized as the largest voluntary purchaser of green power in the U.S.
-      </p>
-      <div class="card-details">
-        <p>
-          Intel won the EPA Green Power Leadership Award, highlighting its leadership in renewable energy use.
-        </p>
+  </div>
+  <!-- Timeline instructions for users, centered -->
+  <p style="text-align:center; margin-top: 20px;">
+    مرر أفقيًا لعرض الجدول الزمني! مرر فوق البطاقة لمزيد من المعلومات.<br>
+    Swipe horizontally to view the timeline! Hover over a card for more information.
+  </p>
+
+  <!-- Subscription Form Section, centered -->
+  <div class="container my-5">
+    <!-- Form heading -->
+    <h2 class="text-center mb-3">اشترك في النشرة الإخبارية<br>Subscribe to the newsletter</h2>
+    <!-- Simple subscription form -->
+    <form class="row g-3 justify-content-center">
+      <!-- Email input field -->
+      <div class="col-auto">
+        <input type="email" class="form-control" placeholder="أدخل بريدك الإلكتروني / Enter your email" required>
       </div>
-    </div>
-    <div class="timeline-card">
-      <h2>2012</h2>
-      <h3>Water Conservation</h3>
-      <img src="https://placehold.co/250x100/0071c5/fff?text=2012" alt="Water Conservation" />
-      <p>
-        Intel begins large-scale water conservation projects.
-      </p>
-      <div class="card-details">
-        <p>
-          These projects save billions of gallons of water each year, supporting Intel's sustainability goals.
-        </p>
+      <!-- Subscribe button -->
+      <div class="col-auto">
+        <button type="submit" class="btn btn-primary mb-3">اشترك / Subscribe</button>
       </div>
+    </form>
+  </div>
+
+  <!-- Simple Footer -->
+  <footer class="bg-dark text-white text-end py-3 mt-5">
+    <div class="container">
+      <!-- Footer text -->
+      <small>© 2024 إنتل. جميع الحقوق محفوظة.</small>
     </div>
-    <div class="timeline-card">
-      <h2>2020</h2>
-      <h3>RISE Strategy</h3>
-      <img src="https://placehold.co/250x100/00b67a/fff?text=2020" alt="RISE Strategy" />
-      <p>
-        Intel launches the RISE strategy.
-      </p>
-      <div class="card-details">
-        <p>
-          RISE stands for Responsibility, Inclusion, Sustainability, and Enabling technology for good.
-        </p>
-      </div>
-    </div>
-    <div class="timeline-card">
-      <h2>2021</h2>
-      <h3>100% Green Power in U.S., Europe, Israel</h3>
-      <img src="https://placehold.co/250x100/0068b5/fff?text=2021" alt="Solar Panels" />
-      <p>
-        Intel achieves 100% renewable electricity use in key regions.
-      </p>
-      <div class="card-details">
-        <p>
-          This achievement covers Intel's operations in the U.S., Europe, and Israel, reducing its carbon footprint.
-        </p>
-      </div>
-    </div>
-    <div class="timeline-card">
-      <h2>2022</h2>
-      <h3>Net-Zero by 2040 Commitment</h3>
-      <img src="https://placehold.co/250x100/00b67a/fff?text=2022" alt="Net Zero" />
-      <p>
-        Intel commits to net-zero greenhouse gas emissions by 2040.
-      </p>
-      <div class="card-details">
-        <p>
-          Intel aims to reach net-zero emissions across its global operations, building on years of environmental progress.
-        </p>
-      </div>
-    </div>
-    <div class="timeline-card">
-      <h2>2023</h2>
-      <h3>Water Restoration</h3>
-      <img src="https://placehold.co/250x100/0071c5/fff?text=2023" alt="Water Restoration" />
-      <p>
-        Intel restores 100% of its global freshwater use.
-      </p>
-      <div class="card-details">
-        <p>
-          Billions of gallons are returned to local watersheds, supporting communities and ecosystems.
-        </p>
-      </div>
-    </div>
-    <div class="timeline-card">
-      <h2>2024</h2>
-      <h3>Sustainability Summit</h3>
-      <img src="https://placehold.co/250x100/0068b5/fff?text=2024" alt="Sustainability Summit" />
-      <p>
-        Intel hosts its first Sustainability Summit.
-      </p>
-      <div class="card-details">
-        <p>
-          The summit brings together leaders to advance green semiconductor manufacturing and share best practices.
-        </p>
-      </div>
-    </div>
-  </section>
-  <!-- Timeline instructions for users -->
-  <p style="text-align:center;">Scroll sideways to view the timeline! Hover over a card for more info.</p>
+  </footer>
+
+  <!-- Language direction script -->
+  <script>
+    // Beginner-friendly script to detect language changes and set RTL or LTR
+
+    // Function to update direction based on language
+    function updateDirection(lang) {
+      var htmlTag = document.documentElement;
+      if (lang === 'ar' || lang === 'he') {
+        htmlTag.setAttribute('dir', 'rtl');
+      } else {
+        htmlTag.setAttribute('dir', 'ltr');
+      }
+    }
+
+    // Listen for changes on the language selector
+    var langSelect = document.getElementById('lang-select');
+    if (langSelect) {
+      langSelect.addEventListener('change', function() {
+        updateDirection(this.value);
+      });
+    }
+
+    // Detect browser language on first load
+    window.addEventListener('DOMContentLoaded', function() {
+      var userLang = navigator.language || navigator.userLanguage;
+      if (userLang.startsWith('ar') || userLang.startsWith('he')) {
+        updateDirection('ar');
+      }
+    });
+  </script>
 </body>
 </html>

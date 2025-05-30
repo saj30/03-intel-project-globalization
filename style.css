@@ -76,7 +76,7 @@ header h1 {
   text-align: center;
   border-top: 4px solid #00b67a;
   position: relative;
-  transition: box-shadow 0.2s, transform 0.2s;
+  transition: transform 0.3s, box-shadow 0.3s;
   backdrop-filter: blur(2px);
 }
 
@@ -106,24 +106,24 @@ header h1 {
 
 /* Hidden details for each card */
 .card-details {
-  opacity: 0;              /* Start hidden */
-  pointer-events: none;    /* Prevent interaction when hidden */
-  transition: opacity 0.2s; /* Only fade in/out for speed */
-  height: 0;               /* Collapse space when hidden */
-  overflow: hidden;        /* Hide content when not shown */
+  opacity: 0;                /* Make it invisible */
+  max-height: 0;             /* Collapse the space */
+  overflow: hidden;          /* Hide anything that overflows */
+  transition: opacity 0.3s, max-height 0.4s; /* Smooth fade and expand */
+  pointer-events: none;      /* Prevent clicking when hidden */
 }
 
-/* Show details on hover */
+/* Show the extra info when hovering over the card */
 .timeline-card:hover .card-details {
-  opacity: 1;              /* Fade in quickly */
-  pointer-events: auto;    /* Allow interaction when shown */
-  height: auto;            /* Expand to fit content */
+  opacity: 1;                /* Fade in */
+  max-height: 200px;         /* Expand to show content (adjust if needed) */
+  pointer-events: auto;      /* Allow interaction */
 }
 
 /* Hover effect for cards: scale and shadow */
 .timeline-card:hover {
-  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
-  transform: scale(1.05);
+  transform: scale(1.03);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
   border-color: #009de0;
 }
 
@@ -141,3 +141,35 @@ header h1 {
     margin: 0 auto;
   }
 }
+
+/* Link to Bootstrap CSS for additional styles */
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Timeline Cards Section using Bootstrap 12-column grid -->
+<div class="container text-center">
+  <div class="row">
+    <div class="col-12 col-md-6 col-lg-3 mb-4">
+      <div class="timeline-card">
+        <h2>1995</h2>
+        <h3>First Environmental Report</h3>
+        <img src="https://placehold.co/250x100/0068b5/fff?text=1995" alt="Green Leaf" />
+        <p>Intel publishes its first environmental, health, and safety report.</p>
+        <div class="card-details">
+          <p>This milestone marked the beginning of Intel's public commitment to transparency and environmental responsibility.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-3 mb-4">
+      <div class="timeline-card">
+        <h2>2008</h2>
+        <h3>Green Power Leadership Award</h3>
+        <img src="https://placehold.co/250x100/00b67a/fff?text=2008" alt="Award" />
+        <p>Intel is recognized as the largest voluntary purchaser of green power in the U.S.</p>
+        <div class="card-details">
+          <p>Intel won the EPA Green Power Leadership Award, highlighting its leadership in renewable energy use.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Add more cards in the same way -->
+  </div>
+</div>
